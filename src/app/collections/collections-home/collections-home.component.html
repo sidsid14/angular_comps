@@ -4,3 +4,23 @@
   [data]="data"
   [headers]="headers"
 ></app-table>
+
+<br />
+<app-divider>Tabs Component</app-divider>
+
+<app-tabs>
+  <a
+    class="item"
+    routerLink="./"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+  >
+    Biography
+  </a>
+  <a class="item" routerLink="./companies" routerLinkActive="active">
+    Companies
+  </a>
+  <a class="item" routerLink="./partners" routerLinkActive="active">
+    Partners
+  </a>
+</app-tabs>
