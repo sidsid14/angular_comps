@@ -1,0 +1,9 @@
+<app-divider>Modal Component</app-divider>
+<button (click)="toggleModal()">Show Modal</button>
+<app-modal (close)="toggleModal()" *ngIf="modalOpen">
+  <div modalTitle>Custom Title</div>
+  <p>Some Custom modal message.</p>
+  <ng-container modalFooter>
+    <button (click)="toggleModal()" class="ui button">Custom Close</button>
+  </ng-container>
+</app-modal>
