@@ -1,0 +1,17 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <div
+    formArrayName="pets"
+    *ngFor="let pet of petsFormArray.controls; let i = index"
+  >
+    <div class="item">
+      <div class="ui checkbox ml-1">
+        <input type="checkbox" [formControlName]="i" />
+        <label>
+          {{ petsData[i].name }}
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <button class="ui primary button" style="margin-top: 10px">Submit</button>
+</form>

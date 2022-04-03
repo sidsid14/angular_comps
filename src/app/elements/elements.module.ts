@@ -7,20 +7,23 @@ import { PlaceholderComponent } from './placeholder/placeholder.component';
 import { TimesDirective } from './times.directive';
 import { SharedModule } from '../shared/shared.module';
 import { SegmentComponent } from './segment/segment.component';
-
+import { CheckboxComponent } from './checkbox/checkbox.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     ElementsHomeComponent,
     PlaceholderComponent,
     TimesDirective,
-    SegmentComponent
+    SegmentComponent,
+    CheckboxComponent,
   ],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
     ElementsRoutingModule,
-    SharedModule
+    SharedModule,
   ],
-  exports: []
+  exports: [],
 })
-export class ElementsModule { }
+export class ElementsModule {}
